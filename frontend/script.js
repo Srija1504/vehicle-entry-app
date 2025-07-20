@@ -10,7 +10,7 @@ function toggleForm() {
 async function register() {
   const username = document.getElementById('regUser').value;
   const password = document.getElementById('regPass').value;
-  const res = await fetch('http://localhost:3000/api/register', {
+  const res = await fetch('https://vehicle-backend.onrender.com/api/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -23,7 +23,7 @@ async function register() {
 async function login() {
   const username = document.getElementById('loginUser').value;
   const password = document.getElementById('loginPass').value;
-  const res = await fetch('http://localhost:3000/api/login', {
+  const res = await fetch('https://vehicle-backend.onrender.com/api/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -49,7 +49,7 @@ async function submitVehicle() {
     mobile: document.getElementById('mobile').value,
     owner: document.getElementById('owner').value
   };
-  await fetch('http://localhost:3000/api/vehicle', {
+  await fetch('https://vehicle-backend.onrender.com/api/vehicle', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ async function submitVehicle() {
 }
 
 async function loadVehicles() {
-  const res = await fetch('http://localhost:3000/api/vehicles', {
+  const res = await fetch('https://vehicle-backend.onrender.com/api/vehicles', {
     headers: { 'Authorization': token }
   });
   const data = await res.json();
