@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehicle Entry Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container" id="auth">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username" required>
+    <input type="password" id="loginPass" placeholder="Password" required>
+    <button onclick="login()">Login</button>
+    <p>No account? <a href="#" onclick="toggleForm()">Register</a></p>
+  </div>
+
+  <div class="container" id="register" style="display:none;">
+    <h2>Register</h2>
+    <input type="text" id="regUser" placeholder="Username" required>
+    <input type="password" id="regPass" placeholder="Password" required>
+    <button onclick="register()">Register</button>
+    <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+  </div>
+
+  <div class="container" id="vehicleForm" style="display:none;">
+    <h2>Vehicle Entry</h2>
+    <input type="text" id="vehicleNumber" placeholder="Vehicle Number" required>
+    <input type="date" id="fitnessDate" placeholder="Fitness Certificate Expiry">
+    <input type="date" id="insuranceDate" placeholder="Insurance Expiry">
+    <input type="date" id="permitDate" placeholder="Permit Expiry">
+    <input type="date" id="taxDate" placeholder="Tax Expiry">
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <input type="text" id="owner" placeholder="Owner Name">
+    <button onclick="submitVehicle()">Save</button>
+    <h3>My Vehicles</h3>
+    <ul id="vehicleList"></ul>
+  </div>
+</body>
+</html>
