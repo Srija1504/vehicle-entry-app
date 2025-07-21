@@ -1,16 +1,17 @@
-let token = '';
+const BASE_URL = "https://vehicle-backend.onrender.com";
+let token = "";
 
 function toggleForm() {
-  document.getElementById('auth').style.display = 
-    document.getElementById('auth').style.display === 'none' ? 'block' : 'none';
-  document.getElementById('register').style.display = 
-    document.getElementById('register').style.display === 'none' ? 'block' : 'none';
+  const a = document.getElementById('auth');
+  const r = document.getElementById('register');
+  a.style.display = a.style.display === 'none' ? 'block' : 'none';
+  r.style.display = r.style.display === 'none' ? 'block' : 'none';
 }
 
 async function register() {
   const username = document.getElementById('regUser').value;
   const password = document.getElementById('regPass').value;
-  const res = await fetch('https://vehicle-backend.onrender.com/api/register', {
+  const res = await fetch(`${BASE_URL}/api/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -23,7 +24,7 @@ async function register() {
 async function login() {
   const username = document.getElementById('loginUser').value;
   const password = document.getElementById('loginPass').value;
-  const res = await fetch('https://vehicle-backend.onrender.com/api/login', {
+  const res = await fetch(`${BASE_URL}/api/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -49,7 +50,7 @@ async function submitVehicle() {
     mobile: document.getElementById('mobile').value,
     owner: document.getElementById('owner').value
   };
-  await fetch('https://vehicle-backend.onrender.com/api/vehicle', {
+  await fetch(`${BASE_URL}/api/vehicle`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -61,7 +62,7 @@ async function submitVehicle() {
 }
 
 async function loadVehicles() {
-  const res = await fetch('https://vehicle-backend.onrender.com/api/vehicles', {
+  const res = await fetch(`${BASE_URL}/api/vehicles`, {
     headers: { 'Authorization': token }
   });
   const data = await res.json();
