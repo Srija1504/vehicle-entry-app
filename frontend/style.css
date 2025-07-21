@@ -1,32 +1,75 @@
 body {
-  font-family: Arial;
-  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
   padding: 20px;
 }
-.container {
+
+h2 {
+  color: #333;
+}
+
+#auth,
+#register,
+#vehicleForm {
   background: white;
   padding: 20px;
-  margin: auto;
-  width: 90%;
+  border-radius: 8px;
   max-width: 400px;
-  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-input, button {
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 15px;
   width: 100%;
   padding: 10px;
-  margin: 8px 0;
-}
-button {
-  background-color: #007bff;
-  color: white;
+  background-color: #2c7be5;
   border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
-ul {
-  padding: 0;
+
+button:hover {
+  background-color: #1a5dcc;
 }
-li {
-  background: #eee;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
+
+a {
+  color: #2c7be5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#vehicleList {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+#vehicleList li {
+  margin-bottom: 8px;
+  padding: 6px;
+  background: #e7f0ff;
+  border-left: 4px solid #2c7be5;
+  border-radius: 4px;
 }
