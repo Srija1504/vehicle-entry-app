@@ -1,12 +1,11 @@
-
-const BASE_URL = "https://vehicle-backend.onrender.com";
-let token = "";
+let token = '';
+const BASE_URL = 'https://vehicle-backend.onrender.com';
 
 function toggleForm() {
-  const a = document.getElementById('auth');
-  const r = document.getElementById('register');
-  a.style.display = a.style.display === 'none' ? 'block' : 'none';
-  r.style.display = r.style.display === 'none' ? 'block' : 'none';
+  document.getElementById('auth').style.display = 
+    document.getElementById('auth').style.display === 'none' ? 'block' : 'none';
+  document.getElementById('register').style.display = 
+    document.getElementById('register').style.display === 'none' ? 'block' : 'none';
 }
 
 async function register() {
