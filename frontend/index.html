@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Vehicle Entry App</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     #vehicleForm { display: none; margin-top: 20px; }
@@ -16,7 +18,7 @@
     <label>Username: <input id="loginUser"></label>
     <label>Password: <input type="password" id="loginPass"></label>
     <button onclick="login()">Login</button>
-    <p>or <a href="#" onclick="toggleForm()">Register</a></p>
+    <a href="#" onclick="toggleForm(); return false;">Register</a>
   </div>
 
   <div id="register">
@@ -24,7 +26,7 @@
     <label>Username: <input id="regUser"></label>
     <label>Password: <input type="password" id="regPass"></label>
     <button onclick="register()">Register</button>
-    <p>or <a href="#" onclick="toggleForm()">Login</a></p>
+   <a href="#" onclick="toggleForm(); return false;">Login</a>
   </div>
 
   <div id="vehicleForm">
